@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<meta content="application/xhtml+xml; charset=UTF-8" http-equiv="Content-Type" />
+		<meta http-equiv-"X-UA-Compatible" content="IE=9"/>
+		<title>Key Mapper Audio</title>
+		<link rel="stylesheet" media="screen" type="text/css" href="./css/normalize.css" />
+		<link rel="stylesheet" media="screen" type="text/css" href="./css/styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Key Mapper Audio</h1>
+		</header>
+
+		<div id="content">
+			<section>
+				<div class="assets_container">
+					<h2>Musiques</h2>
+					Répertoire <input id="music_directory_path" type="text" placeholder="C:/exemple/musiques" value="http://public.syceya.com/KeyMapperAudio/musics" />
+					<br /><input type="file" id="musicFiles" name="files[]" multiple />
+					<div id="musicTableContainer">
+						<table>
+							<tbody>
+								<tr id="0">
+									<td><input type='text' class='keyCell' meta-title='EL-MT_EXTENDED_3-13.mp3' meta-type='music' placeholder='Editer' id='inputmusic0' /></td>
+									<td>EL-MT_EXTENDED_3-13.mp3</td>
+									<td>outils supplémentaires</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="assets_container">
+					<h2>Sons</h2>
+					Sons <input id="sound_directory_path" type="text" placeholder="C:/exemple/sons" value="http://public.syceya.com/KeyMapperAudio/sounds" />
+					<br /><input type="file" id="soundFiles" name="files[]" multiple />
+					<div id="soundTableContainer"></div>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div id="explications">
+					<p>Cette application permet d'assigner des touches pour la lecture de fichiers audios. Vous pouvez les trier en deux catégories. Les <strong>sons</strong>, plusieurs sons peuvent être joués en même temps. Les <strong>musiques</strong>, il ne peut y avoir qu'une seule musique active, une nouvelle lecture de musique arrêtera la précédente.</p>
+				</div>
+				<div id="input_controls">
+					<p><strong>Entrez les chemins des répertoires</strong>;</p>
+				</div>
+
+				<div>
+					<p>Formats audio supportés; <em>MP3</em>, <em>Wav</em>, and <em>Ogg</em></p>
+					<p>Ce qui m'a aidé</p>
+					<ul>
+						<li>http://www.commentcamarche.net/faq/18760-javascript-manipulation-des-controles-clavier</li>
+						<li>http://msdn.microsoft.com/fr-fr/library/gg589489%28v=vs.85%29.aspx</li>
+						<li>http://stackoverflow.com/questions/371875/local-file-access-with-javascript</li>
+						<li>http://stackoverflow.com/questions/1232040/empty-an-array-in-javascript</li>
+						<li>http://www.html5rocks.com/en/tutorials/file/dndfiles/</li>
+						<li>http://www.javascriptkit.com/javatutors/dom2.shtml</li>
+						<li>http://www.w3schools.com</li>
+						<li>https://developer.mozilla.org/en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces</li>
+						<li>http://www.redips.net/javascript/adding-table-rows-and-columns/</li>
+						<li>http://stackoverflow.com/questions/8302166/dynamic-creation-of-table-with-dom</li>
+						<li>http://www.alsacreations.com/article/lire/565-JavaScript-organiser-son-code-en-modules.html</li>
+						<li>http://www.marevueweb.com/css-html/liste-nth-child-propriete/</li>
+						<li>http://openclassrooms.com/courses/maitriser-les-tableaux-html-avec-javascript</li>
+						<li>http://stackoverflow.com/questions/3396754/onkeypress-vs-onkeyup-and-onkeydown</li>
+						<li>http://callmenick.com/2014/04/22/various-css-input-text-styles/</li>
+						<li>https://developer.mozilla.org/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<footer>Réalisé par LeDucSAS, Janvier 2015</footer>
+		<script type="text/javascript" src="./js/vendor/jquery-2.1.3.js"></script>
+		<script type="text/javascript" src="./js/vendor/keymaster.js"></script>
+		<script type="text/javascript" src="./js/tablemanager.js"></script>
+		<script type="text/javascript" src="./js/audiocontrol.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+		<!-- <input type="file" id="files" name="files[]" multiple />
+		<output id="list"></output> -->
+		<script>
+		/*
+		function handleFileSelect(evt) {
+		    var files = evt.target.files; // FileList object
+		    console.log(evt);
+		    // files is a FileList of File objects. List some properties.
+		    var filenames = [];
+		    var output = [];
+		    for (var i = 0, f; f = files[i]; i++) {
+		        output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+		                    f.size, ' bytes, last modified: ',
+		                    f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+		                    '</li>');
+		        
+		    	filenames.push(escape(f.name));
+		    }
+
+		    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+		}
+		document.getElementById('files').addEventListener('change', handleFileSelect, false);
+		*/
+		function handleMusicFileSelect(evt) {
+		    var files = evt.target.files; // FileList object
+		    console.log(evt);
+		    // files is a FileList of File objects. List some properties.
+		    var filenames = [];
+		    var output = [];
+		    for (var i = 0, f; f = files[i]; i++) {
+		    	filenames.push( encodeURIComponent(f.name) );
+		    }
+		    createTable({
+			    containerId: "musicTableContainer",
+			    tableId: "musicMapper",
+    			type: "music",
+		    	filenames: filenames
+		    });
+		}
+		document.getElementById('musicFiles').addEventListener('change', handleMusicFileSelect, false);
+
+		function handleSoundFileSelect(evt) {
+		    var files = evt.target.files; // FileList object
+		    console.log(evt);
+		    // files is a FileList of File objects. List some properties.
+		    var filenames = [];
+		    var output = [];
+		    for (var i = 0, f; f = files[i]; i++) {
+		    	filenames.push( encodeURIComponent(f.name) );
+		    }
+		    createTable({
+			    containerId: "soundTableContainer",
+			    tableId: "soundMapper",
+    			type: "sound",
+		    	filenames: filenames
+		    });
+		}
+		document.getElementById('soundFiles').addEventListener('change', handleSoundFileSelect, false);
+		</script>
+	</body>
+</html>
