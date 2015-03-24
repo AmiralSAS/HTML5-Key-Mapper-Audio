@@ -16,8 +16,10 @@ datas.active_sounds = [];
 
  /*
  * Utilitary functions
+ * filepath is encoded string "c:/folder/"
+ * filename is encoded string "file.mp3"
+ * filepath and filename must have been encoded with encodeURIComponent()
 */
-// filepath and filename must have been encoded with encodeURIComponent()
 function makeFullPath(filepath, filename){
     if (filepath.indexOf("http") == 0) {
         var fullpath = filepath + encodeURIComponent("/") + filename;
@@ -28,6 +30,8 @@ function makeFullPath(filepath, filename){
 }
  /*
  * Lecture play functions
+ * fullpath is encoded string "c:/folder/file.mp3"
+ * fullpath must have been encoded with encodeURIComponent()
 */
 function playMusic(fullpath){
     datas.music_player.src = decodeURIComponent(fullpath);
