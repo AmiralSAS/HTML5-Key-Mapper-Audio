@@ -15,13 +15,6 @@ function handleSingleFile(evt) {
 	}
 	afilereader.readAsDataURL(audiofiles[0]);
 
-
-	createTable({
-		containerId: "musicTableContainer",
-		tableId: "musicMapper",
-    	type: "music",
-		filenames: filenames
-	});
 	console.log(evt.target);
 	console.log(evt.target.files[0].name);
 }

@@ -68,18 +68,17 @@ input[type="text"]:focus{
 	font-size: 32px;
 	border: 1px solid #000;
 	pointer-events: none;
-	background-color: #222;
 	color: #fff;
 }
 .key_container:hover > .key{
-	background-color: #f00;
+	/*background-color: #f00;*/
 }
 .key_fileinput{
 	z-index: 1;
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: 0;
+	opacity: 1;
 }
 input[type="file"]{
 	height: 64px;

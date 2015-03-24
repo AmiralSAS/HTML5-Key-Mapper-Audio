@@ -1,0 +1,23 @@
+body{
+	background-image: url("./images/papier.png");
+}
+p {
+	text-align: justify;
+}
+ul {
+	display: -webkit-flex;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+nav ul li{
+	list-style-type: none;
+	flex: 1;
+	text-align: center;
+}
+nav ul li:first-child{
+	text-align: left;
+}
+nav ul li:last-child{
+	text-align: right;
+}
