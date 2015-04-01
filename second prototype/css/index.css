@@ -1,10 +1,12 @@
 body{
 	background-image: url("./images/papier.png");
+	font-family: "Open Sans";
+	color: #665555;
 }
 p {
 	text-align: justify;
 }
-ul {
+nav ul {
 	display: -webkit-flex;
 	display: flex;
 	padding: 0;
@@ -14,10 +16,17 @@ nav ul li{
 	list-style-type: none;
 	flex: 1;
 	text-align: center;
+	font-size: 25px;
 }
 nav ul li:first-child{
 	text-align: left;
 }
 nav ul li:last-child{
 	text-align: right;
+}
+.asterisk{
+	list-style-type: none;
+}
+.exemple{
+	padding-left: 50px;
 }

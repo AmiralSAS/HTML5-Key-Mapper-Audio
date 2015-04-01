@@ -12,6 +12,7 @@
 		</header>
 
 		<div id="content">
+			<!--
 			<section>
 				<div class="assets_container">
 					<h2>Musiques</h2>
@@ -27,12 +28,27 @@
 				</div>
 				<div class="clear"></div>
 			</section>
+			-->
 
 			<section>
 				<div class="key_line">
 					<div class="key_container">
 						<div class="key">A</div>
-						<input type="file" class="key_fileinput" id="key_a">
+						<input type="file" class="key_fileinput" id="key_a" data-keylabel="A">
+					</div>
+					<div class="key_container">
+						<div class="key">Z</div>
+						<input type="file" class="key_fileinput" id="key_z" data-keylabel="Z">
+					</div>
+				</div>
+				<div class="key_line">
+					<div class="key_container">
+						<div class="key">Q</div>
+						<input type="file" class="key_fileinput" id="key_q" data-keylabel="Q">
+					</div>
+					<div class="key_container">
+						<div class="key">S</div>
+						<input type="file" class="key_fileinput" id="key_s" data-keylabel="S">
 					</div>
 				</div>
 			</section>
@@ -40,12 +56,6 @@
 			<section>
 				<div id="explications">
 					<p>Cette application permet d'assigner des touches pour la lecture de fichiers audios. Vous pouvez les trier en deux catégories. Les <strong>sons</strong>, plusieurs sons peuvent être joués en même temps. Les <strong>musiques</strong>, il ne peut y avoir qu'une seule musique active, une nouvelle lecture de musique arrêtera la précédente.</p>
-				</div>
-				<div id="input_controls">
-					<p><strong>Entrez les chemins des répertoires</strong>;</p>
-				</div>
-
-				<div>
 					<p>Formats audio supportés; <em>MP3</em>, <em>Wav</em>, and <em>Ogg</em></p>
 				</div>
 			</section>

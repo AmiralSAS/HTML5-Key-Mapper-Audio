@@ -46,15 +46,22 @@ input[type="text"]:focus{
  /*
  * Key
 */
-.key_line{
-
-}
+.key_line{}
+.key_line+.key_line{
+	margin-left: 32px;}
 .key_container{
 	position: relative;
-	display: block;
+	display: inline-block;
 	height: 64px;
-	width: 64px;
-}
+	width: 64px;}
+	.key_container:hover > .key{
+		background-color: #00f;}
+	.key_container:active > .key{
+		background-color: #f00;}
+	.key_container:not(:first-child){
+		margin-right: 16px;}
+	.key_container:last-child{
+		clear: both;}
 .key{
 	position: absolute;
 	top: 0;
@@ -68,55 +75,31 @@ input[type="text"]:focus{
 	font-size: 32px;
 	border: 1px solid #000;
 	pointer-events: none;
+	background-color: #444;
 	color: #fff;
 }
-.key_container:hover > .key{
-	/*background-color: #f00;*/
-}
+
 .key_fileinput{
 	z-index: 1;
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: 1;
-}
+	opacity: 1;}
 input[type="file"]{
 	height: 64px;
 	width: 64px;
 	background-color: #ffa;
 	border: 3px dashed red;
-}
-input[type="file"]:hover{
-	background-color: #aff;
-	border-color: #00f;
-	cursor: pointer;
-}
-input[type="file"]:focus{
-	background-color: #faa;
-	border: 3px solid #f00;
-}
-
- /*
- * tableContainer
-*/
-table{
-}
-table tbody tr td{
-	padding: 2px;
-}
-table tbody tr:nth-child(odd){
-	background-color: #fda;
-}
-table tbody tr:nth-child(even){
-	background-color: #ffa;
-}
-table tbody tr td input[type="text"]{
-	width: 64px;
-}
-
-
-
-
+	opacity: 0;}
+	input[type="file"]:hover{
+		background-color: #aff;
+		border-color: #00f;
+		cursor: pointer;
+		opacity: 0;}
+	input[type="file"]:focus{
+		background-color: #faa;
+		border: 3px solid #f00;
+		opacity: 0;}
 
 #overlay{
 	position: absolute;
