@@ -1,0 +1,136 @@
+.hidden
+{
+display: none;
+}
+body
+{
+background-image: url("./papier.png");
+font-family: sans-serif;
+}
+#page
+{
+margin: auto;
+width: 1120px;
+}
+#clavier
+{
+border: 2px solid #656565;
+border-right: none;
+border-radius : 4px;
+padding: 5px;
+}
+h1
+{
+font-size: 40px;
+color: #655;
+margin-left:200px;
+}
+#the
+{
+font-size: 30px;
+vertical-align: top;
+}
+.touches
+{
+border: 2px solid black;
+color: black;
+border-radius : 6px;
+display: inline-block;
+width: 80px;
+height: 80px;
+margin-right: 5px;
+text-align: center;
+line-height: 80px;
+vertical-align: middle;
+font-size: 1.5em;
+box-shadow: 2px 2px 4px #111;
+}
+
+.touches:hover
+{
+border: 2px solid black;
+color: white;
+background-color: #665555;
+cursor:pointer;
+}
+.touches:active
+{
+box-shadow: none;
+}
+#rangee0
+{
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+#rangee1
+{
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+#rangee2
+{
+	padding-left: 80px;
+	margin-bottom: 10px;
+}
+#rangee3
+{
+	padding-left: 120px;
+	margin-bottom: 10px;
+}
+#rangee4
+{
+	padding-left: 0px;
+}
+#espace
+{
+padding-left:30px;
+width: 430px;
+height: 80px;
+border: 2px solid grey;
+color: grey;
+border-radius : 6px;
+margin-left: 308px;
+line-height: 80px;
+vertical-align: middle;
+}
+#espace span
+{
+padding-left:300px;
+}
+#espace span:hover
+{
+animation-name: blinker;
+animation-delay: 0.8s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes blinker {  
+0% { opacity: 1.0; }
+50% { opacity: 0.0; }
+100% { opacity: 1.0; }
+}
+ul
+{
+list-style-type:none;
+border-bottom: 2px dashed #655;
+padding: 0px;
+}
+li
+{
+display: inline-block;
+font-size: 22px;
+width: 100px;
+text-align: center;
+}
+a
+{
+text-decoration: none;
+color: #655;
+}
+a:hover
+{
+color: orange;
+}
+/*
+ * .class #id
+ */
