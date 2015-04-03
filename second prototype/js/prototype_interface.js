@@ -42,22 +42,21 @@ for(var i=0;i<classname.length;i++){
  /****************
  * Some functions
 */
-function addKey(){
-	/*
-	var last_index = datas.sound_active.length;
-	var sound_player = document.createElement("audio");
-	datas.active_sounds.push(sound_player);
-	datas.active_sounds[last_index].src = decodeURIComponent(fullpath);
-	*/
+function playKey(theKeyPressed){
+	if (datas.key_list[theKeyPressed]) {
+		playMusic(theKeyPressed);
+	}
 }
 
-
-
 function playMusic(theKeyToPlay){
+	console.log(theKeyToPlay);
 	datas.music_player.src = datas.key_list[theKeyToPlay].source;
 	datas.music_player.play();
 }
 
+function playSound(){
+
+}
 
 
 function manageKeyPressure(){
@@ -65,11 +64,10 @@ function manageKeyPressure(){
 
 	for (var i=0; i < inputKeys.length; i++) {
 		if (key.isPressed( inputKeys[i].getAttribute("data-keylabel") )) {
-			console.log( inputKeys[i].getAttribute("data-keylabel") );
 			// Animate function
 
 			// play music function
-			
+			playKey( inputKeys[i].getAttribute("data-keylabel") );
 		}
 
 	}
