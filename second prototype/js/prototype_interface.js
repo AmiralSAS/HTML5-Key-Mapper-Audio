@@ -17,12 +17,13 @@ function handleFileSelect(evt) {
 		}
 
 		var reader = new FileReader();
+		datas.key_list[actualFileInput.getAttribute("data-keylabel")] = {};
+		datas.key_list[actualFileInput.getAttribute("data-keylabel")].name = encodeURIComponent(files[i].name);
+
 		// Closure to capture the file information.
 		reader.onload = (function(theFile) {
 			return function(e) {
-				datas.key_list[actualFileInput.getAttribute("data-keylabel")] = {
-					source : e.target.result
-				};
+				datas.key_list[actualFileInput.getAttribute("data-keylabel")].source = e.target.result;
 			};
 		})(f);
 
@@ -49,9 +50,10 @@ function playKey(theKeyPressed){
 }
 
 function playMusic(theKeyToPlay){
-	console.log(theKeyToPlay);
 	datas.music_player.src = datas.key_list[theKeyToPlay].source;
 	datas.music_player.play();
+	console.log(theKeyToPlay);
+	console.log(decodeURIComponent(datas.key_list[theKeyToPlay].name));
 }
 
 function playSound(){
