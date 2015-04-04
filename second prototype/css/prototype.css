@@ -47,19 +47,25 @@ input[type="text"]:focus{
  * Key
 */
 .key_line{}
-.key_line+.key_line{
-	margin-left: 32px;}
+.key_line:nth-child(2){
+	margin-left: 34px;}
+.key_line:nth-child(3){
+	margin-left: 66px;}
+.key_line:nth-child(4){
+	margin-left: 100px;}
+
 .key_container{
 	position: relative;
 	display: inline-block;
 	height: 64px;
-	width: 64px;}
+	width: 64px;
+	margin-bottom: 4px;}
 	.key_container:hover > .key{
 		background-color: #00f;}
 	.key_container:active > .key{
 		background-color: #f00;}
 	.key_container:not(:first-child){
-		margin-right: 16px;}
+		margin-left: 4px;}
 	.key_container:last-child{
 		clear: both;}
 .key{
