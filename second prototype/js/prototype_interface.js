@@ -10,6 +10,7 @@ datas.sound_active = [];
 function handleFileSelect(evt) {
 	var files = evt.target.files;
 	var actualFileInput = this;
+	var this_key = actualFileInput.getAttribute("data-keylabel");
 
 	for (var i = 0, f; f = files[i]; i++) {
 		if (!f.type.match('audio.*')) {
@@ -17,8 +18,9 @@ function handleFileSelect(evt) {
 		}
 
 		var reader = new FileReader();
-		datas.key_list[actualFileInput.getAttribute("data-keylabel")] = {};
-		datas.key_list[actualFileInput.getAttribute("data-keylabel")].name = encodeURIComponent(files[i].name);
+		datas.key_list[this_key] = {};
+		datas.key_list[this_key].name = encodeURIComponent(files[i].name);
+		datas.key_list[this_key].key = this_key;
 
 		// Closure to capture the file information.
 		reader.onload = (function(theFile) {
@@ -26,6 +28,8 @@ function handleFileSelect(evt) {
 				datas.key_list[actualFileInput.getAttribute("data-keylabel")].source = e.target.result;
 			};
 		})(f);
+
+		updateKeymap();
 
 		reader.readAsDataURL(f);
 	}
@@ -52,12 +56,27 @@ function playKey(theKeyPressed){
 function playMusic(theKeyToPlay){
 	datas.music_player.src = datas.key_list[theKeyToPlay].source;
 	datas.music_player.play();
-	console.log(theKeyToPlay);
-	console.log(decodeURIComponent(datas.key_list[theKeyToPlay].name));
 }
 
 function playSound(){
 
+}
+
+function updateKeymap(){
+	var ul = document.getElementById("keymap");
+	ul.innerHTML = "";
+
+	// for (var i = 0; i < datas.key_list.length; i++) {
+	for (var key in datas.key_list) {
+		if (typeof(datas.key_list[key]) == "object") {
+			var li = document.createElement("li");
+			var text = datas.key_list[key].key;
+			text += " - ";
+			text += decodeURIComponent(datas.key_list[key].name);
+			li.appendChild(document.createTextNode(text));
+			ul.appendChild(li);
+		}
+	};
 }
 
 
