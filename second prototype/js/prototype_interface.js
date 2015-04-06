@@ -9,7 +9,7 @@ datas.active_sounds = [];
 
     /*****************
    ******************
-  ** rag and drop manager
+  ** Drag and drop manager
  ******************
 *****************/ 
 function handleFileSelect(evt) {
@@ -90,7 +90,6 @@ function updateKeymap(){
 	var ul = document.getElementById("keymap");
 	ul.innerHTML = "";
 
-	// for (var i = 0; i < datas.key_list.length; i++) {
 	for (var key in datas.key_list) {
 		if (typeof(datas.key_list[key]) == "object") {
 			var li = document.createElement("li");
@@ -140,7 +139,7 @@ function stopMusic(){
 }
 function stopSounds(){
     if (datas.active_sounds.length > 0) {
-        // destroy the array containing the sounds elements to stop them from playing
+        // destroy the array containing the sounds elements to stop them from playing and be sure we free memory
         for (var i = datas.active_sounds.length - 1; i >= 0; i--) {
             datas.active_sounds[i].src = "";
             datas.active_sounds[i].load();
