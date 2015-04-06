@@ -74,7 +74,6 @@ function manageKeyPressure(){
 
 function playKey(theKeyPressed){
 	if (datas.key_list[theKeyPressed]) {
-		console.log(datas.key_list[theKeyPressed].key);
 		if (isNaN(datas.key_list[theKeyPressed].key)) {
 			playSound(theKeyPressed);
 		} else {
@@ -112,13 +111,11 @@ key("space", stopAll);
  * Lecture play functions
 */
 function playMusic(theKeyToPlay){
-	console.log("music");
 	datas.music_player.src = datas.key_list[theKeyToPlay].source;
 	datas.music_player.play();
 }
 
 function playSound(theKeyToPlay){
-	console.log("sound");
     var last_index = datas.active_sounds.length;
     var sound_player = document.createElement("audio");
     datas.active_sounds.push(sound_player);
