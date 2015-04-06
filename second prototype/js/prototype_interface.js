@@ -50,8 +50,10 @@ var classname = document.getElementsByClassName("key_fileinput");
 for(var i=0;i<classname.length;i++){
 	classname[i].addEventListener('change', handleFileSelect, false);
 }
-// This for listening to spacebar
 document.onkeydown = manageKeyPressure;
+
+// This for listening to spacebar wich will stop all sounds
+key("space", stopAll);
 
     /*****************
    ******************
@@ -98,8 +100,6 @@ function updateKeymap(){
 		}
 	};
 }
-
-key("space", stopAll);
 
 
     /*****************
