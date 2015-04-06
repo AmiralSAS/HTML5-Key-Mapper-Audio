@@ -50,6 +50,8 @@ var classname = document.getElementsByClassName("key_fileinput");
 for(var i=0;i<classname.length;i++){
 	classname[i].addEventListener('change', handleFileSelect, false);
 }
+
+// This for listenening the key pressed and what to do with
 document.onkeydown = manageKeyPressure;
 
 // This for listening to spacebar wich will stop all sounds
