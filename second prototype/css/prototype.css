@@ -1,50 +1,16 @@
 body{
 	padding: 16px;
 	margin: 0;
-	background-color: #AAA;
-}
+	background-color: #AAA;}
+	#content{
+		padding: 16px;
+		background-color: #FFF;}
 em{
 	color: #a63;
 }
-#content{
-	padding: 16px;
-	background-color: #FFF;
-}
-
-.dnone{
-	display: none;
-}
-
-.azerty{
-	boder: 2px solid red;
-}
-
-.assets_container{
-	border: 3px dotted #000;
-	padding: 16px;
-	float: left;
-}
-.clear{
-	clear: both;
-}
 
  /*
- * keyCell
-*/
-input[type="text"]:hover{
-	border-color: #0ff;
-	background-color: #aff;
-	cursor: pointer;
-}
-
-input[type="text"]:focus{
-	border-color: #f00;
-	background-color: #f66;
-	cursor: pointer;
-}
-
- /*
- * Key
+ * Line of keys
 */
 .key_line{}
 .key_line:nth-child(2){
@@ -54,20 +20,22 @@ input[type="text"]:focus{
 .key_line:nth-child(4){
 	margin-left: 100px;}
 
+ /*
+ * The container of the key, required parent for .key animations
+*/
 .key_container{
 	position: relative;
 	display: inline-block;
 	height: 64px;
 	width: 64px;
 	margin-bottom: 4px;}
-	.key_container:hover > .key{
-		background-color: #00f;}
-	.key_container:active > .key{
-		background-color: #f00;}
 	.key_container:not(:first-child){
 		margin-left: 4px;}
 	.key_container:last-child{
 		clear: both;}
+ /*
+ * Keyboard key
+*/
 .key{
 	position: absolute;
 	top: 0;
@@ -82,9 +50,14 @@ input[type="text"]:focus{
 	border: 1px solid #000;
 	pointer-events: none;
 	background-color: #444;
-	color: #fff;
-}
-
+	color: #fff;}
+	.key_container:hover > .key{
+		background-color: #00f;}
+	.key_container:active > .key{
+		background-color: #f00;}
+ /*
+ * Don't rename that class without renoming it in the JS file
+*/
 .key_fileinput{
 	z-index: 1;
 	position: absolute;
@@ -106,12 +79,3 @@ input[type="file"]{
 		background-color: #faa;
 		border: 3px solid #f00;
 		opacity: 0;}
-
-#overlay{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.5);
-}
