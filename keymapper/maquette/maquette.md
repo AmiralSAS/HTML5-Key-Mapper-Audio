@@ -1,21 +1,27 @@
 # Description de la maquette du site:
 ## Accueil
 ###Fond de page
-La page fait 960 pixels de large.
+La page fait 740 pixels de large pour son contenu.
 Elle est remplis avec une texture de papier beige à l'intérieur et déborde avec du tissus gris.
 
 ###Bordure
 La page fait 960 pixels de large
 
 ### Polices
-Les titres utilisent une police cursive en script "Bad script".
+Le titre principal utilise une police cursive en script "Bad script".
+Les titrages sont dans une police Sans serif Italique "Gudea Italic".
+La navigation est en Gudea normal et Gudea gras.
+Le corp de texte utilise une police serifé "Merriweather".
+Certains icônes viennent d'une police spécial "Awesome".
 
 ### Couleurs
-Il y as quatre couleurs:
-- beige (pour le fond de page)
-- marron #665555 (pour les bordures et les ombres)
+Il y as quatre teintes:
+- beige (représenté par une texture papier pour le fond de page)
+- marron #665555 (pour les bordures et les textes)
 - beige clair (pour les zones de texte)
-- gris foncé (pour le texte).
+- gris #767676 (pour le débordement de la page).
+- gris très foncé (pour les titres)
+- fond navigation #FFDDAA
 
 ###Titrage
 Le titre principal est __The KEYMAPPER__.
