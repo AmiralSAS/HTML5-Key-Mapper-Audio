@@ -3,7 +3,16 @@ HTML5-Key-Mapper-Audio :speaker:
 Offline HTML5 page for binding sounds and musics to keyboard and play it.
 You can find a working version in Archives directory (the first prototype)
 
+Support of MP3, Wav, Ogg. 
+
 It has been tested on Windows 8.1, not yet on linux. 
+
+How to use the second prototype :nut_and_bolt: 
+--------------------------------
+* Download the repository
+* Open "second prototype"/keyboard.html
+* Drag and drop your audio files on the dedicated key
+* Hit the key
 
 How to use the first prototype :nut_and_bolt: 
 --------------------------------
@@ -13,13 +22,11 @@ How to use the first prototype :nut_and_bolt:
 * Drag and drop your audio files into the dedicated area (musics to music area, sounds to sound area)
 * Assign a key to each of the listed audio
 
-Support of MP3, Wav, Ogg. 
-
 Credits :dancers:
 -------
 Based on an idea of, and in collaboration with [Buridan](https://github.com/Buridan).
 
-Useful links
+Helpful links
 * http://www.commentcamarche.net/faq/18760-javascript-manipulation-des-controles-clavier
 * http://msdn.microsoft.com/fr-fr/library/gg589489%28v=vs.85%29.aspx
 * http://stackoverflow.com/questions/371875/local-file-access-with-javascript
