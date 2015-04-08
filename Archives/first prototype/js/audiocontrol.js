@@ -25,6 +25,7 @@ function makeFullPath(filepath, filename){
         var fullpath = filepath + encodeURIComponent("/") + filename;
     } else {
         var fullpath = encodeURIComponent("file:///") + filepath + encodeURIComponent("/") + filename;
+        console.log(fullpath);
     }
     return fullpath;
 }

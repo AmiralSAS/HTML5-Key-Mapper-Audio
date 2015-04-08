@@ -13,14 +13,16 @@ datas.active_sounds = [];
  ******************
 *****************/ 
 function handleFileSelect(evt) {
+	console.log(evt);
 	var files = evt.target.files;
 	var actualFileInput = this;
 	var this_key = actualFileInput.getAttribute("data-keylabel");
 
 	for (var i = 0, f; f = files[i]; i++) {
-		if (!f.type.match('audio.*')) {
+		console.log(f.type);
+		/*if (!f.type.match('audio.*')) {
 			continue;
-		}
+		}*/
 
 		var reader = new FileReader();
 		datas.key_list[this_key] = {};
