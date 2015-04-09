@@ -3,7 +3,9 @@
 	<head>
 		<title>Clavier bruitage</title>
 		<meta charset="utf-8"/>
+		<link rel="icon" type="image/jpg" href="./css/favicon.jpg" />
 		<link href="./css/maquette_style.css" type="text/css" rel="stylesheet"  />
+
 	</head>
 	<body>
 	<div id="page">
@@ -20,64 +22,65 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="dossier">
-			<p><input type="file" /> vous devez préciser dans quel répertoire se trouvent vos sons</p>
-		</section>
 		<main id="clavier">
-			<div id="rangee0">
-				<div class=touches><span>1</span></div>
-				<div class=touches><span>2</span></div>
-				<div class=touches><span>3</span></div>
-				<div class=touches><span>4</span></div>
-				<div class=touches><span>5</span></div>
-				<div class=touches><span>6</span></div>
-				<div class=touches><span>7</span></div>
-				<div class=touches><span>8</span></div>
-				<div class=touches><span>9</span></div>
-				<div class=touches><span>0</span></div>
+			<div class="key_line">
+				<div class="key_container"><div class="key">1</div><input type="file" class="key_fileinput" id="key_1" data-keylabel="1"/></div>
+				<div class="key_container"><div class="key">2</div><input type="file" class="key_fileinput" id="key_2" data-keylabel="2"/></div>
+				<div class="key_container"><div class="key">3</div><input type="file" class="key_fileinput" id="key_3" data-keylabel="3"/></div>
+				<div class="key_container"><div class="key">4</div><input type="file" class="key_fileinput" id="key_4" data-keylabel="4"/></div>
+				<div class="key_container"><div class="key">5</div><input type="file" class="key_fileinput" id="key_5" data-keylabel="5"/></div>
+				<div class="key_container"><div class="key">6</div><input type="file" class="key_fileinput" id="key_6" data-keylabel="6"/></div>
+				<div class="key_container"><div class="key">7</div><input type="file" class="key_fileinput" id="key_7" data-keylabel="7"/></div>
+				<div class="key_container"><div class="key">8</div><input type="file" class="key_fileinput" id="key_8" data-keylabel="8"/></div>
+				<div class="key_container"><div class="key">9</div><input type="file" class="key_fileinput" id="key_9" data-keylabel="9"/></div>
+				<div class="key_container"><div class="key">0</div><input type="file" class="key_fileinput" id="key_0" data-keylabel="0"/></div>
 			</div>
-			<div id="rangee1">
-				<div class=touches><span>A</span></div>
-				<div class=touches><span>Z</span></div>
-				<div class=touches><span>E</span></div>
-				<div class=touches><span>R</span></div>
-				<div class=touches><span>T</span></div>
-				<div class=touches><span>Y</span></div>
-				<div class=touches><span>U</span></div>
-				<div class=touches><span>I</span></div>
-				<div class=touches><span>O</span></div>
-				<div class=touches><span>P</span></div>
+			<div class="key_line">
+				<div class="key_container"><div class="key">A</div><input type="file" class="key_fileinput" id="key_a" data-keylabel="A"/></div>
+				<div class="key_container"><div class="key">Z</div><input type="file" class="key_fileinput" id="key_z" data-keylabel="Z"/></div>
+				<div class="key_container"><div class="key">E</div><input type="file" class="key_fileinput" id="key_e" data-keylabel="E"/></div>
+				<div class="key_container"><div class="key">R</div><input type="file" class="key_fileinput" id="key_r" data-keylabel="R"/></div>
+				<div class="key_container"><div class="key">T</div><input type="file" class="key_fileinput" id="key_t" data-keylabel="T"/></div>
+				<div class="key_container"><div class="key">Y</div><input type="file" class="key_fileinput" id="key_y" data-keylabel="Y"/></div>
+				<div class="key_container"><div class="key">U</div><input type="file" class="key_fileinput" id="key_u" data-keylabel="U"/></div>
+				<div class="key_container"><div class="key">I</div><input type="file" class="key_fileinput" id="key_i" data-keylabel="I"/></div>
+				<div class="key_container"><div class="key">O</div><input type="file" class="key_fileinput" id="key_o" data-keylabel="O"/></div>
+				<div class="key_container"><div class="key">P</div><input type="file" class="key_fileinput" id="key_p" data-keylabel="P"/></div>
 			</div>
-			<div id="rangee2">
-				<div class=touches><span>Q</span></div>
-				<div class=touches><span>S</span></div>
-				<div class=touches><span>D</span></div>
-				<div class=touches><span>F</span></div>
-				<div class=touches><span>G</span></div>
-				<div class=touches><span>H</span></div>
-				<div class=touches><span>J</span></div>
-				<div class=touches><span>K</span></div>
-				<div class=touches><span>L</span></div>
-				<div class=touches><span>M</span></div>
+			<div class="key_line">
+				<div class="key_container"><div class="key">Q</div><input type="file" class="key_fileinput" id="key_q" data-keylabel="Q"/></div>
+				<div class="key_container"><div class="key">S</div><input type="file" class="key_fileinput" id="key_s" data-keylabel="S"/></div>
+				<div class="key_container"><div class="key">D</div><input type="file" class="key_fileinput" id="key_d" data-keylabel="D"/></div>
+				<div class="key_container"><div class="key">F</div><input type="file" class="key_fileinput" id="key_f" data-keylabel="F"/></div>
+				<div class="key_container"><div class="key">G</div><input type="file" class="key_fileinput" id="key_g" data-keylabel="G"/></div>
+				<div class="key_container"><div class="key">H</div><input type="file" class="key_fileinput" id="key_h" data-keylabel="H"/></div>
+				<div class="key_container"><div class="key">J</div><input type="file" class="key_fileinput" id="key_j" data-keylabel="J"/></div>
+				<div class="key_container"><div class="key">K</div><input type="file" class="key_fileinput" id="key_k" data-keylabel="K"/></div>
+				<div class="key_container"><div class="key">L</div><input type="file" class="key_fileinput" id="key_l" data-keylabel="L"/></div>
+				<div class="key_container"><div class="key">M</div><input type="file" class="key_fileinput" id="key_m" data-keylabel="M"/></div>
 			</div>
-			<div id="rangee3">
-				<div class=touches><span>W</span></div>
-				<div class=touches><span>X</span></div>
-				<div class=touches><span>C</span></div>
-				<div class=touches><span>V</span></div>
-				<div class=touches><span>B</span></div>
-				<div class=touches><span>N</span></div>
-				<div class=touches><span>,</span></div>
-				<div class=touches><span>;</span></div>
-				<div class=touches><span>:</span></div>
-				<div class=touches><span>!</span></div>
+			<div class="key_line">
+				<div class="key_container"><div class="key">W</div><input type="file" class="key_fileinput" id="key_w" data-keylabel="W"/></div>
+				<div class="key_container"><div class="key">X</div><input type="file" class="key_fileinput" id="key_x" data-keylabel="X"/></div>
+				<div class="key_container"><div class="key">C</div><input type="file" class="key_fileinput" id="key_c" data-keylabel="C"/></div>
+				<div class="key_container"><div class="key">V</div><input type="file" class="key_fileinput" id="key_v" data-keylabel="V"/></div>
+				<div class="key_container"><div class="key">B</div><input type="file" class="key_fileinput" id="key_b" data-keylabel="B"/></div>
+				<div class="key_container"><div class="key">N</div><input type="file" class="key_fileinput" id="key_n" data-keylabel="N"/></div>
+				<div class="key_container"><div class="key">,</div><input type="file" class="key_fileinput" id="key_," data-keylabel=","/></div>
+				<div class="key_container"><div class="key">;</div><input type="file" class="key_fileinput" id="key_;" data-keylabel=";"/></div>
+				<div class="key_container"><div class="key">:</div><input type="file" class="key_fileinput" id="key_:" data-keylabel=":"/></div>
+				<div class="key_container"><div class="key">!</div><input type="file" class="key_fileinput" id="key_!" data-keylabel="!"/></div>
 			</div>
-			<div id="rangee4">
-				<div id="espace">ESPACE<span> &#9654; &#9168;&#9168;</span></div>
+			<div class="key_line">
+				<div id="espace">ESPACE
+					<div class="key"><span>&#9654; &#9168;&#9168</span></div>
+				<div/>
 			</div>
 		</main>
 		<footer>
 		</footer>
 	</div>
+		<script type="text/javascript" src="./js/vendor/keymaster.js"></script>
+		<script type="text/javascript" src="./js/prototype_interface.js"></script>
 	</body>
 </html>
