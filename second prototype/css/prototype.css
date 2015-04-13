@@ -65,8 +65,8 @@ em{
 	left: 0;
 	opacity: 1;}
 input[type="file"]{
-	height: 64px;
-	width: 64px;
+	height: 100%;
+	width: 100%;
 	background-color: #ffa;
 	border: 3px dashed red;
 	opacity: 0;}
