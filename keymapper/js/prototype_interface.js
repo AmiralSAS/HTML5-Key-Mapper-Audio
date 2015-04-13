@@ -33,8 +33,6 @@ function handleFileSelect(evt) {
 		reader.onload = (function(theFile) {
 			return function(e) {
 				datas.key_list[actualFileInput.getAttribute("data-keylabel")].source = e.target.result;
-			
-			console.log("aaaaa", e.target.result);
 			};
 		})(f);
 
@@ -59,7 +57,8 @@ for(var i=0;i<classname.length;i++){
 document.onkeydown = manageKeyPressure;
 
 // This for listening to spacebar wich will stop all sounds
-key("space", stopAll);
+key("space", switchPauseMusic);
+key("0", stopAll);
 
     /*****************
    ******************
@@ -71,6 +70,7 @@ function manageKeyPressure(){
 
 	for (var i=0; i < inputKeys.length; i++) {
 		if (key.isPressed( inputKeys[i].getAttribute("data-keylabel") )) {
+			console.log(inputKeys[i].getAttribute("data-keylabel"));
 			// Animate function
 
 			// play music function
@@ -152,5 +152,29 @@ function stopSounds(){
             datas.active_sounds[i].load();
             datas.active_sounds.pop();
         };
+    };
+}
+
+ /*
+ * Pause functions
+*/
+
+function switchPauseMusic(){
+    if (datas.music_player.src) {
+    	if (!datas.music_player.paused) {
+    		pauseMusic();
+    	}else{
+	        unpauseMusic();
+    	}
+    };
+}
+function pauseMusic(){
+    if (datas.music_player.src) {
+        datas.music_player.pause();
+    };
+}
+function unpauseMusic(){
+    if (datas.music_player.src) {
+        datas.music_player.play();
     };
 }
