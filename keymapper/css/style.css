@@ -1,0 +1,145 @@
+@font-face
+{
+	font-family : "Gudea";
+	src : url('./fonts/Gudea-Regular.otf');
+}
+@font-face
+{
+	font-family : "Merriweather";
+	src : url('./fonts/Merriweather-Regular.ttf');
+}
+body
+{
+font-family: "Merriweather";
+color:#565248;
+background-color:#D3CDBD;
+}
+.container_12
+{
+background-image: url("ricepaper2.png");
+}
+#zone_connexion
+{
+-moz-box-shadow: -1px 3px 4px 0px #aa9F98;
+-webkit-box-shadow: -1px 3px 4px 0px #aa9F98;
+-o-box-shadow: -1px 3px 4px 0px #aa9F98;
+box-shadow: -1px 3px 4px 0px #aa9F98;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=251, Strength=4);
+height:50px;
+}
+#zone_connexion button
+{
+height:50px;
+font-size:38px;
+background-color:transparent;
+border:none;
+}
+h1,h2,h3,nav
+{
+font-family:"Gudea";
+}
+nav
+{
+position:relative;
+top:-30px;
+font-size:28px;
+}
+h1
+{
+font-size:48px;
+font-weight:bold;
+}
+#the
+{
+font-size:25px;
+position:relative;
+top:-18px;
+}
+#key
+{
+display:inline-block;
+border: 4px solid #665555;
+border-radius:4px;
+width:30px;
+height:30px;
+}
+h2
+{
+font-size:32px;
+font-weight:normal;
+text-align:center;
+}
+h3
+{
+font-size:28px;
+font-style:italic;
+font-weight:normal;
+}
+p
+{
+font-size:14px;
+}
+a
+{
+text-decoration:none;
+color:inherit;
+}
+ul
+{
+list-style-type:none;
+padding-left:0px;
+}
+nav li
+{
+border-bottom:2px dotted #8A8068;
+}
+nav #nav_g li
+{
+text-align:right;
+padding-right:80px;
+}
+nav #nav_d li
+{
+text-align:left;
+padding-left:80px;
+}
+#voir_clavier
+{
+position:relative;
+top:-25px;
+padding:40px 5px;
+vertical-align:middle;
+text-align:center;
+border:2px solid #565248;
+border-radius:100%;
+}
+#voir_clavier:hover
+{
+background-color:#565248;
+color:#D3CDBD;
+}
+input
+{
+border:none;
+border-bottom:1px dotted #565248;
+background-color:transparent;
+}
+section
+{
+border-top:2px dashed #665555;
+}
+#presentation{border-top:none;}
+#presentation h2
+{
+display:none;
+}
+header
+{
+border-bottom:2px solid #565248;
+}
+
+footer
+{
+border-top:2px solid #665555;
+text-align:center;
+}
