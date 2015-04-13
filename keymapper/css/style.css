@@ -26,13 +26,30 @@ background-image: url("ricepaper2.png");
 box-shadow: -1px 3px 4px 0px #aa9F98;
 filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=251, Strength=4);
 height:50px;
+width:260px;
+position:absolute;
+}
+#zone_connexion label
+{
+width:180px;
 }
 #zone_connexion button
 {
-height:50px;
 font-size:38px;
 background-color:transparent;
 border:none;
+}
+#zone_connexion button > .fa:nth-child(2)
+{
+display: none;
+}
+#zone_connexion button:hover > .fa:nth-child(1)
+{
+display: none;
+}
+#zone_connexion button:hover > .fa:nth-child(2)
+{
+display: inherit;
 }
 h1,h2,h3,nav
 {
@@ -43,9 +60,11 @@ nav
 position:relative;
 top:-30px;
 font-size:28px;
+margin-bottom:-50px;
 }
 h1
 {
+margin:0px 10px;
 font-size:48px;
 font-weight:bold;
 }
@@ -57,11 +76,14 @@ top:-18px;
 }
 #key
 {
+position:relative;
 display:inline-block;
 border: 4px solid #665555;
 border-radius:4px;
-width:30px;
-height:30px;
+text-align:center;
+line-height:50px;
+width:50px;
+height:50px;
 }
 h2
 {
@@ -71,6 +93,8 @@ text-align:center;
 }
 h3
 {
+margin-top:5px;
+margin-bottom:5px;
 font-size:28px;
 font-style:italic;
 font-weight:normal;
@@ -83,6 +107,10 @@ a
 {
 text-decoration:none;
 color:inherit;
+}
+nav a:hover
+{
+color:orange;
 }
 ul
 {
@@ -112,9 +140,12 @@ vertical-align:middle;
 text-align:center;
 border:2px solid #565248;
 border-radius:100%;
+background-image: url("ricepaper2.png");
+z-index:2;
 }
 #voir_clavier:hover
 {
+background-image: none;
 background-color:#565248;
 color:#D3CDBD;
 }
@@ -142,4 +173,65 @@ footer
 {
 border-top:2px solid #665555;
 text-align:center;
+}
+#ambiances aside img
+{
+position:relative;
+width:369px;
+top:-80px;
+margin-bottom:-80px;
+}
+#ecouter_acheter p a.button  > .fa:nth-child(3)
+{
+display: none;
+}
+#ecouter_acheter p a.button:hover > .fa:nth-child(2)
+{
+display: none;
+}
+#ecouter_acheter p a.button:hover > .fa:nth-child(3)
+{
+display: inherit;
+}
+#ecouter_acheter p a.button:hover
+{
+	margin-right:4px;
+}
+#ecouter_acheter p i
+{
+vertical-align:middle;
+margin-right:10px;
+}
+.fa-eur
+{
+padding-right:5px;
+padding-top:3px;
+border:8px solid #565248;
+width:40px;
+height:42px;
+border-radius:100%;
+text-align:center;
+}
+.fa-eur:hover
+{
+background-color:#565248;
+color:#FDF9ED;
+}
+#ambiances form label:nth-child(3)
+{
+	padding-top:5px;
+}
+#ambiances form textarea
+{
+height:100px;
+background-color:#D3CDBD;
+border:none;
+width:100%;
+}
+#ambiances form button
+{
+margin-top:5px;
+margin-left:-28px;
+border:2px solid #565248;
+border-radius:5px;
 }

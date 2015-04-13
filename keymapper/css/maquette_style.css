@@ -1,34 +1,10 @@
-.hidden
-{
-display: none;
-}
-body
-{
-background-image: url("./papier.png");
-font-family: sans-serif;
-}
-#page
-{
-margin: auto;
-width: 1120px;
-}
 #clavier
 {
 border: 2px solid #656565;
 border-right: none;
 border-radius : 4px;
 padding: 5px;
-}
-h1
-{
-font-size: 40px;
-color: #655;
-margin-left:200px;
-}
-#the
-{
-font-size: 30px;
-vertical-align: top;
+font-family:"gudea";
 }
 .key_container
 {
@@ -37,8 +13,8 @@ border: 2px solid black;
 color: black;
 border-radius : 6px;
 display: inline-block;
-width: 80px;
-height: 80px;
+width: 70px;
+height: 70px;
 margin-right: 5px;
 }
 .key_container:hover
@@ -53,15 +29,15 @@ cursor:pointer;
 box-shadow: none;
 }
 .key_line{
-	padding-left: 0px;/*padding incrémentale de 40px*/
-	margin-bottom: 10px;
+	padding-left: 0px;/*padding incrémentale de 30px*/
+	margin-bottom: 5px;
 }
 .key_line:nth-child(2){
-	padding-left: 40px;}
+	padding-left: 30px;}
 .key_line:nth-child(3){
-	padding-left: 80px;}
+	padding-left: 60px;}
 .key_line:nth-child(4){
-	padding-left: 120px;}
+	padding-left: 90px;}
 
 .key{
 	position: absolute;
@@ -74,7 +50,7 @@ box-shadow: none;
 	vertical-align: middle;
 	text-align: center;
 	text-align: center;
-	line-height: 80px;
+	line-height: 70px;
 	vertical-align: middle;
 	font-size: 1.5em;
 	box-shadow: 2px 2px 4px #111;
@@ -94,41 +70,16 @@ box-shadow: none;
 {
 position:relative;
 padding-left:30px;
-width: 430px;
-height: 80px;
+width: 400px;
+height: 70px;
 border: 2px solid grey;
 color: grey;
 border-radius : 6px;
 margin-left: 308px;
-line-height: 80px;
+line-height: 70px;
 vertical-align: middle;
 }
 #espace span
 {
 padding-left:300px;
 }
-ul
-{
-list-style-type:none;
-border-bottom: 2px dashed #655;
-padding: 0px;
-}
-li
-{
-display: inline-block;
-font-size: 22px;
-width: 100px;
-text-align: center;
-}
-a
-{
-text-decoration: none;
-color: #655;
-}
-a:hover
-{
-color: orange;
-}
-/*
- * .class #id
- */

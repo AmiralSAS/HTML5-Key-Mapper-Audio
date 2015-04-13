@@ -6,18 +6,20 @@
 		<link rel="stylesheet" type="text/css" media="all" href="css/960_12_col.css" />
 		<link href="./css/style.css" type="text/css" rel="stylesheet"  />
 		<link href="./css/font-awesome.css" type="text/css" rel="stylesheet"  />
-		<link href="./js/script.js" type="text/javascript" rel="script"  />
 	</head>
 	<body>
 		<div class="container_12">
-			<div class="grid_5 prefix_7">
-			<div  id="zone_connexion">
-				<form id="connexion">
-					<label class="grid_3">Nom/email:<input size="12" id="nom_mail" type="text"name="conn_nom_mail"/></label>
-					<label class="grid_3">Mot de passe:<input size="12" id="mdp" type="password" name="conn_pwd"/></label>
-					<button type="submit" form="connexion" name="conn_envoi"><i class="fa fa-check-circle-o"></i><i class="fa fa-check-circle"></i></button>
-				</form>
-			</div>
+			<div class="grid_4 prefix_8">
+				<div  id="zone_connexion">
+					<form id="connexion">
+						<label class="grid_3"><i class="fa fa-envelope-o fa-fw"></i><input size="12" id="nom_mail" type="text"name="conn_nom_mail"/></label>
+						<label class="grid_3"><i class="fa fa-key fa-fw"></i><input size="12" id="mdp" type="password" name="conn_pwd"/></label>
+						<button type="submit" form="connexion" name="conn_envoi">
+							<i class="fa fa-check-circle-o"></i>
+							<i class="fa fa-check-circle"></i>
+						</button>
+					</form>
+				</div>
 			</div>
 		<header>
 			<h1><span id="the">The</span><span id="key">K</span>ey<span id="key">M</span>apper</h1>
@@ -25,7 +27,7 @@
 				<ul>
 					<div id="nav_g" class="grid_4 alpha omega">
 						<li><a href="#presentation">Presentation</a></li>
-						<li><a href="#fontionnement">Fonctionnement</a></li>
+						<li><a href="#fonctionnement">Fonctionnement</a></li>
 					</div>
 					<a href="clavier.html"><li id="voir_clavier" class="grid_2  alpha omega">Voir le clavier</li></a>
 					<div id="nav_d" class="grid_4 alpha omega">
@@ -35,11 +37,11 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="presentation"class="grid_12">
-			<h2>Presentation</h2>
+		<section id="presentation">
+			<h2 class="grid_12">Presentation</h2>
 			<article class="grid_6">
 				<p>Bienvenu sur l'application <em>Keymapper</em>.</p>
-				<p>Cette webapp permet d'assigner les touches du clavier à des bruit et des musiques.</p>
+				<p>Cette webapp permet d'assigner les touches du clavier à des bruits et des musiques.</p>
 				<p>L'application est conçu pour que vous puissiez aisément raconter une histoire tout en vous accompagnant d'une bande sonore et de bruitages.</p>
 				<p>Pour essayer, il vous suffit de cliquer sur "Voir le clavier" et de glisser-déposer vos sons sur les touches.</p>
 			</article>
@@ -47,8 +49,8 @@
 				<img src="./images/jdr.png"/>
 			</aside>
 		</section>
-		<section id="fonctionnement"class="grid_12">
-			<h2>Fonctionnement</h2>
+		<section id="fonctionnement">
+			<h2 class="grid_12">Fonctionnement</h2>
 			<article class="grid_6">
 				<h3>Les Lettres</h3>
 				<p>Elles servent à assigner des bruitages,
@@ -71,51 +73,72 @@
 				<img src="./images/fonctionnement.png"/>
 			</aside>
 		</section>
-		<section id="ambiances"class="grid_12">
-			<h2>Ambiances</h2>
+		<section id="ambiances">
+			<h2 class="grid_12">Ambiances</h2>
 			<article class="grid_6">
 				<p>Besoin d'une série cohérente de bruitages pour accompagner vos histoires?</br>
 				Nous vous proposons plusieurs paquets de sons prêt à l'emplois pour différentes ambiances.</p>
 				<p>Les paquets de sons sont des archives zip contenant tout un set de musiques et de bruits sur un thème donné.</p>
 				<p>Il ne vous reste plus qu'à placer les sons qui vous intéressent sur le clavier.</p>
 			</article>
-			<aside class="grid_6"><img src="./images/faune.png"</aside>
+			<aside class="grid_6"><img src="./images/faune.png"/></aside>
 			<div id="ambiance"class="grid_6">
 				<h3>Cyberpunk</h3>
 				<p>Plongez dans un décor futuriste et brutale.</p>
 				<p>Ce paquet très contrasté donnera beaucoup de relief tant à vos descriptions qu'aux phases d'actions.</p>
-				<div id="ecouter_acheter">
-					<p><a onclick="this.firstChild.play()" class="button"><audio src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio><i class="fa fa-play-circle-o"></i></a>Écouter la démo</p>
-					<p><a href="#"><i class="fa fa-eur"></i></a>Commander le paquet</p>
+				<div class="grid_4" id="ecouter_acheter">
+					<p><a onclick="demo_cp.play()" class="button">
+						<audio id="demo_cp" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
+						<i class="fa fa-play-circle-o fa-5x"></i>
+						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
+					</p>
+					<p><a href="#">
+						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+					</p>
 				</div>
+					<img class="grid_2 alpha omega" id="illustration" src="./images/cybergun.png"/>
 			</div>
 			<div id="ambiance"class="grid_6">
 				<h3>Épouvante</h3>
 				<p>Paquet spécial tension!</p>
 				<p>Bruits étranges, grincements, agitation et cris sont disponibles à foison.</p>
-				<div id="ecouter">
-					<p><a onclick="this.firstChild.play()" class="button"><audio src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio><i class="fa fa-play-circle-o"></i></a>Écouter la démo</p>
-					<p><a href="#"><i class="fa fa-eur"></i></a>Commander le paquet</p>
+				<div class="grid_4" id="ecouter_acheter">
+					<p><a onclick="demo_ep.play()" class="button">
+						<audio id="demo_ep" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
+						<i class="fa fa-play-circle-o fa-5x"></i>
+						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
+					</p>
+					<p><a href="#">
+						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+					</p>
 				</div>
+					<img class="grid_2 alpha omega" id="illustration" src="./images/clown.png"/>
 			</div>
 			<div id="ambiance"class="grid_6">
 				<h3>Heroic Fantasy</h3>
 				<p>Partfait pour explorer de grands donjons!</p>
 				<p>Ce paquet soigne l'environnement avec de nombreux bruitages naturelles et des musiques discrètes.</p>
-				<div id="ecouter">
-					<p><a onclick="this.firstChild.play()" class="button"><audio src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio><i class="fa fa-play-circle-o"></i></a>Écouter la démo</p>
-					<p><a href="#"><i class="fa fa-eur"></i></a>Commander le paquet</p>
+				<div class="grid_4" id="ecouter_acheter">
+					<p><a onclick="demo_hf.play()" class="button">
+						<audio id="demo_hf" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
+						<i class="fa fa-play-circle-o fa-5x"></i>
+						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
+					</p>
+					<p><a href="#">
+						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+					</p>
 				</div>
+					<img class="grid_2 alpha omega" id="illustration" src="./images/squelette.png"/>
 			</div>
 			<div id="ambiance"class="grid_6">
 				<h3>Une nouvelle Ambiance?</h3>
 				<p>Envoyez-nous vos souhaits et nous les réaliseront peut-être.</p>
-				</hr>
+				<hr/>
 				<form>
-					<label>Nom:<input type="text" name="contact_nom"/></label>
-					<label>E-mail:<input type="email" name="contact_mail"/></label>
-					<label>Message<textarea row="6" cols="50" name="contact_message"></textarea></label>
-					<button type="submit" value="Envoyer" name="contact_envoi"/>
+					<label class="grid_3 alpha">Nom:<input size="13" type="text" name="contact_nom"/></label>
+					<label class="grid_3 omega">E-mail:<input size="13" type="email" name="contact_mail"/></label>
+					<label class="grid_6 alpha omega">Message</br><textarea name="contact_message"></textarea></label>
+					<div class="grid_1 prefix_5"><button type="submit" value="Envoyer" name="contact_envoi">Envoyer</button></div>
 				</form>
 			</div>
 		</section>

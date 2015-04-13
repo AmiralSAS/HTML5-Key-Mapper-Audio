@@ -3,26 +3,31 @@
 	<head>
 		<title>Clavier bruitage</title>
 		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" media="all" href="css/960_12_col.css" />
+		<link href="./css/style.css" type="text/css" rel="stylesheet"  />
 		<link rel="icon" type="image/jpg" href="./css/favicon.jpg" />
 		<link href="./css/maquette_style.css" type="text/css" rel="stylesheet"  />
-
+		<link href="./css/font-awesome.css" type="text/css" rel="stylesheet"  />
 	</head>
 	<body>
-	<div id="page">
+		<div class="container_12">
 		<header>
-			<div id="titre">
-				<h1><span id="the">The </span>K3YM4PP3R</h1>
-			</div>
-			<nav>
+			<h1><span id="the">The</span><span id="key">K</span>ey<span id="key">M</span>apper</h1>
+			<nav class="grid_10 prefix_1 suffix_1">
 				<ul>
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#">Clavier</a></li>
-					<li><a href="#">Github</a></li>
-					<li><a href="#">Contact</a></li>
+					<div id="nav_g" class="grid_4 alpha omega">
+						<li><a href="#presentation">Presentation</a></li>
+						<li><a href="#fonctionnement">Fonctionnement</a></li>
+					</div>
+					<a href="index.html"><li id="voir_clavier" class="grid_2  alpha omega">Retour à l'accueil</li></a>
+					<div id="nav_d" class="grid_4 alpha omega">
+						<li><a href="#ambiances">Ambiances</a></li>
+						<li><a href="https://github.com/AmiralSAS/HTML5-Key-Mapper-Audio">Github</a></li>
+					</div>
 				</ul>
 			</nav>
 		</header>
-		<main id="clavier">
+		<main class="grid_12"id="clavier">
 			<div class="key_line">
 				<div class="key_container"><div class="key">1</div><input type="file" class="key_fileinput" id="key_1" data-keylabel="1"/></div>
 				<div class="key_container"><div class="key">2</div><input type="file" class="key_fileinput" id="key_2" data-keylabel="2"/></div>
@@ -77,8 +82,11 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-		</footer>
+		 <footer class="grid_12">
+			 <p>Développé et designé par <em>Buridan</em> & <em>AmiralSAS</em></br>
+			 L'application <strong>Keymapper</strong> est distribué sous licence GPL.</br>
+			 <p>Keymapper.tk ©2015</p>
+		 </footer>
 	</div>
 		<script type="text/javascript" src="./js/vendor/keymaster.js"></script>
 		<script type="text/javascript" src="./js/prototype_interface.js"></script>
