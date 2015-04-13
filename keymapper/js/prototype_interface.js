@@ -38,9 +38,9 @@ function handleFileSelect(evt) {
 			};
 		})(f);
 
-		updateKeymap();
-
 		reader.readAsDataURL(f);
+
+		// updateKeymap(); // Desactivated this function since there it need to be rewritten
 	}
 }
 
@@ -90,6 +90,8 @@ function playKey(theKeyPressed){
 	}
 }
 
+// Desactivated this function since there it need to be rewritten
+/*
 function updateKeymap(){
 	var ul = document.getElementById("keymap");
 	ul.innerHTML = "";
@@ -105,6 +107,7 @@ function updateKeymap(){
 		}
 	};
 }
+*/
 
 
     /*****************
