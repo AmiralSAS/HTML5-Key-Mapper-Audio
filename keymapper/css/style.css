@@ -235,3 +235,8 @@ margin-left:-28px;
 border:2px solid #565248;
 border-radius:5px;
 }
+
+
+section:not(#presentation){
+	overflow: auto;
+}
