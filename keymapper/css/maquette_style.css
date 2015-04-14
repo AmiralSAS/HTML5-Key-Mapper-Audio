@@ -83,3 +83,25 @@ vertical-align: middle;
 {
 padding-left:300px;
 }
+#bandeau_externe
+{
+position:fixed;
+background-color:#FDF9ED;
+right:0px;
+left:85%;
+top:5px;
+bottom:5px;
+-moz-box-shadow: -1px 3px 4px 0px #aa9F98;
+-webkit-box-shadow: -1px 3px 4px 0px #aa9F98;
+-o-box-shadow: -1px 3px 4px 0px #aa9F98;
+box-shadow: -1px 3px 4px 0px #aa9F98;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=251, Strength=4);
+}
+#bandeau_externe:empty
+{
+display:none;
+}
+footer
+{
+border:none;
+}
