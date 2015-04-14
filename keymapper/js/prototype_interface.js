@@ -158,7 +158,6 @@ function stopSounds(){
  /*
  * Pause functions
 */
-
 function switchPauseMusic(){
     if (datas.music_player.src) {
     	if (!datas.music_player.paused) {
@@ -176,5 +175,31 @@ function pauseMusic(){
 function unpauseMusic(){
     if (datas.music_player.src) {
         datas.music_player.play();
+    };
+}
+/* Sounds */
+function switchPauseSounds(){
+    if (datas.active_sounds.length > 0) {
+    	if (!datas.active_sounds[0].paused) {
+    		pauseSounds();
+    	}else{
+	        unpauseSounds();
+    	}
+    };
+}
+function pauseSounds(){
+    if (datas.active_sounds.length > 0) {
+        for (var i = datas.active_sounds.length - 1; i >= 0; i--) {
+            datas.active_sounds[i].src = "";
+            datas.active_sounds[i].pause();
+        };
+    };
+}
+function unpauseSounds(){
+    if (datas.active_sounds.length > 0) {
+        for (var i = datas.active_sounds.length - 1; i >= 0; i--) {
+            datas.active_sounds[i].src = "";
+            datas.active_sounds[i].play();
+        };
     };
 }
