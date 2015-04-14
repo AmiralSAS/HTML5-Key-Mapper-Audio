@@ -177,6 +177,7 @@ function unpauseMusic(){
         datas.music_player.play();
     };
 }
+
 /* Sounds */
 function switchPauseSounds(){
     if (datas.active_sounds.length > 0) {
