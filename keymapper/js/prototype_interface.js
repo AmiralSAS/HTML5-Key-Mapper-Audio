@@ -177,6 +177,7 @@ function unpauseMusic(){
         datas.music_player.play();
     };
 }
+<<<<<<< HEAD
 
 /* Sounds */
 function switchPauseSounds(){
@@ -204,3 +205,5 @@ function unpauseSounds(){
         };
     };
 }
+=======
+>>>>>>> 529b15e005c93dba0353c4a340c71a5191507cf1
