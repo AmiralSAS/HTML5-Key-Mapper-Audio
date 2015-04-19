@@ -12,7 +12,7 @@
 			<div class="grid_4 prefix_8">
 				<div  id="zone_connexion">
 					<form id="connexion">
-						<label class="grid_3"><i class="fa fa-envelope-o fa-fw"></i><input size="12" id="nom_mail" type="text"name="conn_nom_mail"/></label>
+						<label class="grid_3"><i class="fa fa-envelope-o fa-fw"></i><input size="12" id="nom_mail" type="text" name="conn_nom_mail"/></label>
 						<label class="grid_3"><i class="fa fa-key fa-fw"></i><input size="12" id="mdp" type="password" name="conn_pwd"/></label>
 						<button type="submit" form="connexion" name="conn_envoi">
 							<i class="fa fa-check-circle-o"></i>
@@ -22,127 +22,133 @@
 				</div>
 			</div>
 		<header>
-			<h1><span id="the">The</span><span id="key">K</span>ey<span id="key">M</span>apper</h1>
-			<nav class="grid_10 prefix_1 suffix_1">
-				<ul>
-					<div id="nav_g" class="grid_4 alpha omega">
+		<div id="logo_titre">
+				<h1><span id="the">The</span><span id="k_logo">K</span>ey<span id="m_logo">M</span>apper</h1>
+			</div>
+			<nav class="container_10 prefix_1 suffix_1">
+					<div id="nav_g" class="grid_4 ">
+						<ul>
 						<li><a href="#presentation">Presentation</a></li>
 						<li><a href="#fonctionnement">Fonctionnement</a></li>
+						</ul>
 					</div>
-					<a href="clavier.html"><li id="voir_clavier" class="grid_2  alpha omega">Voir le clavier</li></a>
-					<div id="nav_d" class="grid_4 alpha omega">
+					<ul><li onclick="location.href='./clavier.html';" id="voir_clavier" class="grid_2  alpha omega">Voir le clavier</li></ul>
+					<div id="nav_d" class="grid_4 ">
+						<ul>
 						<li><a href="#ambiances">Ambiances</a></li>
 						<li><a href="https://github.com/AmiralSAS/HTML5-Key-Mapper-Audio">Github</a></li>
+						</ul>
 					</div>
-				</ul>
 			</nav>
 		</header>
-		<section id="presentation">
+		<section class="container_12" id="presentation">
 			<h2 class="grid_12">Presentation</h2>
-			<article class="grid_6">
+			<article class="grid_6 prefix_1">
+				<h3>Bienvenu</h3>
 				<p>Bienvenu sur l'application <em>Keymapper</em>.</p>
 				<p>Cette webapp permet d'assigner les touches du clavier à des bruits et des musiques.</p>
 				<p>L'application est conçu pour que vous puissiez aisément raconter une histoire tout en vous accompagnant d'une bande sonore et de bruitages.</p>
 				<p>Pour essayer, il vous suffit de cliquer sur "Voir le clavier" et de glisser-déposer vos sons sur les touches.</p>
 			</article>
-			<aside>
-				<img src="./images/jdr.png"/>
+			<aside class="grid_3 suffix_1">
+				<img src="./images/jdr.png" alt="rôlistes entrain de jouer"/>
 			</aside>
 		</section>
-		<section id="fonctionnement">
+		<section class="container_12" id="fonctionnement">
 			<h2 class="grid_12">Fonctionnement</h2>
-			<article class="grid_6">
-				<h3>Les Lettres</h3>
-				<p>Elles servent à assigner des bruitages,
-					<ul>
-						<li>Vous pouvez jouer tout les sons simultanément.</li>
-						<li>Si vous voulez arrêter tout les sons, il suffit d'appuyer sur 0.</li>
-					</ul>
-				</p>
-			</article>
-			<article class="grid_6">
-				<h3>Les Chiffres</h3>
-				<p>Ils servent à assigner des musiques,
-					<ul>
-						<li>Vous pouvez passer d'une musique à la suivante en appuyant simplement sur les flèches.</li>
-						<li>Pour mettre la musique en pause, appuyez sur Espace.</li>
-					</ul>
-				</p>
-			</article>
+			<div class="grid_5 prefix_1">
+				<article>
+					<h3>Les Chiffres</h3>
+					<p>Ils servent à assigner des musiques,</p>
+						<ul>
+							<li>Vous pouvez passer d'une musique à la suivante en appuyant simplement sur les flèches.</li>
+							<li>Pour mettre la musique en pause, appuyez sur Espace.</li>
+						</ul>
+				</article>
+				<article>
+					<h3>Les Lettres</h3>
+					<p>Elles servent à assigner des bruitages,</p>
+						<ul>
+							<li>Vous pouvez jouer tout les sons simultanément.</li>
+							<li>Si vous voulez arrêter tout les sons, il suffit d'appuyer sur 0.</li>
+						</ul>
+				</article>
+			</div>
 			<aside class="grid_6">
-				<img src="./images/fonctionnement.png"/>
+				<img src="./images/fonctionnement.png" alt="illustration d'un glisser-déposer sur des touches"/>
 			</aside>
 		</section>
-		<section id="ambiances">
-			<h2 class="grid_12">Ambiances</h2>
-			<article class="grid_6">
-				<p>Besoin d'une série cohérente de bruitages pour accompagner vos histoires?</br>
+		<section class="container_10 prefix_1 suffix_1" id="ambiances">
+			<h2 class="grid_10">Ambiances</h2>
+			<article class="grid_5">
+				<h3>Besoin de sons?</h3>
+				<p>Besoin d'une série cohérente de bruitages pour accompagner vos histoires?<br/>
 				Nous vous proposons plusieurs paquets de sons prêt à l'emplois pour différentes ambiances.</p>
 				<p>Les paquets de sons sont des archives zip contenant tout un set de musiques et de bruits sur un thème donné.</p>
 				<p>Il ne vous reste plus qu'à placer les sons qui vous intéressent sur le clavier.</p>
 			</article>
-			<aside class="grid_6"><img src="./images/faune.png"/></aside>
-			<div id="ambiance"class="grid_6">
+			<aside class="grid_5"><img src="./images/faune.png" alt="faune entrain de jouer"/></aside>
+			<div class="grid_5">
 				<h3>Cyberpunk</h3>
 				<p>Plongez dans un décor futuriste et brutale.</p>
 				<p>Ce paquet très contrasté donnera beaucoup de relief tant à vos descriptions qu'aux phases d'actions.</p>
-				<div class="grid_4" id="ecouter_acheter">
+				<div class="grid_3 ecouter_acheter">
 					<p><a onclick="demo_cp.play()" class="button">
 						<audio id="demo_cp" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
 						<i class="fa fa-play-circle-o fa-5x"></i>
 						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
 					</p>
 					<p><a href="#">
-						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+						<i class="fa fa-eur fa-3x"></i></a>Commander
 					</p>
 				</div>
-					<img class="grid_2 alpha omega" id="illustration" src="./images/cybergun.png"/>
+					<img class="grid_2 alpha omega"  src="./images/cybergun.png" alt="personnage cyberpunk"/>
 			</div>
-			<div id="ambiance"class="grid_6">
+			<div class="grid_5">
 				<h3>Épouvante</h3>
 				<p>Paquet spécial tension!</p>
 				<p>Bruits étranges, grincements, agitation et cris sont disponibles à foison.</p>
-				<div class="grid_4" id="ecouter_acheter">
+				<div class="grid_3 ecouter_acheter">
 					<p><a onclick="demo_ep.play()" class="button">
 						<audio id="demo_ep" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
 						<i class="fa fa-play-circle-o fa-5x"></i>
 						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
 					</p>
 					<p><a href="#">
-						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+						<i class="fa fa-eur fa-3x"></i></a>Commander
 					</p>
 				</div>
-					<img class="grid_2 alpha omega" id="illustration" src="./images/clown.png"/>
+					<img class="grid_2 alpha omega"  src="./images/clown.png" alt="clown"/>
 			</div>
-			<div id="ambiance"class="grid_6">
+			<div class="grid_5">
 				<h3>Heroic Fantasy</h3>
-				<p>Partfait pour explorer de grands donjons!</p>
+				<p>Parfait pour explorer de grands donjons!</p>
 				<p>Ce paquet soigne l'environnement avec de nombreux bruitages naturelles et des musiques discrètes.</p>
-				<div class="grid_4" id="ecouter_acheter">
+				<div class="grid_3 ecouter_acheter">
 					<p><a onclick="demo_hf.play()" class="button">
 						<audio id="demo_hf" src="http://upload.wikimedia.org/wikipedia/commons/a/a9/Tromboon-sample.ogg"></audio>
 						<i class="fa fa-play-circle-o fa-5x"></i>
 						<i class="fa fa-play-circle fa-5x"></i></a>Écouter la démo
 					</p>
 					<p><a href="#">
-						<i class="fa fa-eur fa-3x"></i></a>Commander le paquet
+						<i class="fa fa-eur fa-3x"></i></a>Commander
 					</p>
 				</div>
-					<img class="grid_2 alpha omega" id="illustration" src="./images/squelette.png"/>
+					<img class="grid_2 alpha omega"  src="./images/squelette.png" alt="squelette"/>
 			</div>
-			<div id="ambiance"class="grid_6">
+			<div class="grid_5">
 				<h3>Une nouvelle Ambiance?</h3>
 				<p>Envoyez-nous vos souhaits et nous les réaliseront peut-être.</p>
 				<hr/>
 				<form>
-					<label class="grid_3 alpha">Nom:<input size="13" type="text" name="contact_nom"/></label>
-					<label class="grid_3 omega">E-mail:<input size="13" type="email" name="contact_mail"/></label>
-					<label class="grid_6 alpha omega">Message</br><textarea name="contact_message"></textarea></label>
-					<div class="grid_1 prefix_5"><button type="submit" value="Envoyer" name="contact_envoi">Envoyer</button></div>
+					<label class="grid_2 alpha">Nom:<input size="6" type="text" name="contact_nom"/></label>
+					<label class="grid_3 alpha omega">E-mail:<input size="13" type="email" name="contact_mail"/></label>
+					<label class="grid_5 alpha omega">Message<br/><textarea name="contact_message"></textarea></label>
+					<div class="grid_1 prefix_4"><button type="submit" value="Envoyer" name="contact_envoi">Envoyer</button></div>
 				</form>
 			</div>
 		</section>
-		<footer class="grid_12">
+		<footer class="grid_12 alpha omega">
 			<p>Développé et designé par <em>Buridan</em> & <em>AmiralSAS</em></p>
 			<p>L'application <strong>Keymapper</strong> est distribué sous licence GPL.</p>
 			<p>Les Paquets de sons sont distribués sous copyright.</p>

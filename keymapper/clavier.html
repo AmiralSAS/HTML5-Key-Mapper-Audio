@@ -5,29 +5,44 @@
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" media="all" href="css/960_12_col.css" />
 		<link href="./css/style.css" type="text/css" rel="stylesheet"  />
-		<link rel="icon" type="image/jpg" href="./css/favicon.jpg" />
-		<link href="./css/maquette_style.css" type="text/css" rel="stylesheet"  />
 		<link href="./css/font-awesome.css" type="text/css" rel="stylesheet"  />
+		<link href="./css/maquette_style.css" type="text/css" rel="stylesheet"  />
 	</head>
 	<body>
 		<div class="container_12">
+			<div class="grid_4 prefix_8">
+				<div  id="zone_connexion">
+					<form id="connexion">
+						<label class="grid_3"><i class="fa fa-envelope-o fa-fw"></i><input size="12" id="nom_mail" type="text" name="conn_nom_mail"/></label>
+						<label class="grid_3"><i class="fa fa-key fa-fw"></i><input size="12" id="mdp" type="password" name="conn_pwd"/></label>
+						<button type="submit" form="connexion" name="conn_envoi">
+							<i class="fa fa-check-circle-o"></i>
+							<i class="fa fa-check-circle"></i>
+						</button>
+					</form>
+				</div>
+			</div>
 		<header>
-			<h1><span id="the">The</span><span id="key">K</span>ey<span id="key">M</span>apper</h1>
-			<nav class="grid_10 prefix_1 suffix_1">
-				<ul>
-					<div id="nav_g" class="grid_4 alpha omega">
-						<li><a href="#presentation">Presentation</a></li>
-						<li><a href="#fonctionnement">Fonctionnement</a></li>
+		<div id="logo_titre">
+				<h1><span id="the">The</span><span id="k_logo">K</span>ey<span id="m_logo">M</span>apper</h1>
+			</div>
+			<nav class="container_10 prefix_1 suffix_1">
+					<div id="nav_g" class="grid_4 ">
+						<ul>
+						<li><a href="index.html#presentation">Presentation</a></li>
+						<li><a href="index.html#fonctionnement">Fonctionnement</a></li>
+						</ul>
 					</div>
-					<a href="index.html"><li id="voir_clavier" class="grid_2  alpha omega">Retour à l'accueil</li></a>
-					<div id="nav_d" class="grid_4 alpha omega">
-						<li><a href="#ambiances">Ambiances</a></li>
+					<ul><li onclick="location.href='./index.html';" id="voir_clavier" class="grid_2  alpha omega">Retour à l'accueil</li></ul>
+					<div id="nav_d" class="grid_4 ">
+						<ul>
+						<li><a href="index.html#ambiances">Ambiances</a></li>
 						<li><a href="https://github.com/AmiralSAS/HTML5-Key-Mapper-Audio">Github</a></li>
+						</ul>
 					</div>
-				</ul>
 			</nav>
 		</header>
-		<main class="grid_12"id="clavier">
+		<main class="grid_12" id="clavier">
 		<!-- <i class="fa fa-times-circle"></i> symbole pour déassigner une touche -->
 			<div class="key_line">
 				<div class="key_container"><div class="key">1</div><input type="file" class="key_fileinput" id="key_1" data-keylabel="1"/></div>
@@ -79,13 +94,13 @@
 			</div>
 			<div class="key_line">
 				<div id="espace">ESPACE
-					<div class="key"><span>&#9654; &#9168;&#9168</span></div>
+					<div class="key"><span>&#9654; &#9168; &#9168;</span></div>
 				</div>
 			</div>
 		</main>
 		 <footer class="grid_12">
-			 <p>Développé et designé par <em>Buridan</em> & <em>AmiralSAS</em></br>
-			 L'application <strong>Keymapper</strong> est distribué sous licence GPL.</br>
+			 <p>Développé et designé par <em>Buridan</em> & <em>AmiralSAS</em><br/>
+			 L'application <strong>Keymapper</strong> est distribué sous licence GPL.<br/>
 			 <p>Keymapper.tk ©2015</p>
 		 </footer>
 	</div>
